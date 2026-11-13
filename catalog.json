@@ -1,0 +1,8 @@
+{
+  "schema": "bme.catalog/1",
+  "id": "pr9-b85",
+  "version": "0.1.0",
+  "title": "Machinist PR9 (B85) firmware",
+  "engine": "^0.1",
+  "files": []
+}
