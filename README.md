@@ -22,7 +22,7 @@ No hardware observation is recorded for this board. Read `bme guide flashing` be
 
 ## Shared with the MR9A PRO
 
-The Machinist E5-MR9A PRO (Q87) ships a build of the same X99-derived AMI code base, so most defects exist on both boards. A shared defect keeps one id in both repositories: `firmware_mr9a-pro-rev1.2` records it with the same finding text and its own patch variant, and holds the hardware tests. A finding whose `affects.label` is `Both` is shared. The catalog bundled with `bme` holds the records of both boards.
+The Machinist E5-MR9A PRO (Q87) ships a build of the same X99-derived AMI code base, so most defects exist on both boards. A shared defect keeps one id in both repositories: `firmware_mr9a-pro-rev1.2` records it with the same finding text and its own patch variant, and holds the hardware tests. A finding whose `affects.label` is `MR9A PRO and PR9` is shared. The catalog bundled with `bme` holds the records of both boards.
 
 `bme` checks that the two repositories agree on every shared record, and fails with the record, the field and both values when they differ:
 

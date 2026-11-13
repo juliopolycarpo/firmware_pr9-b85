@@ -5,7 +5,7 @@
   "priority": "P3",
   "status": "wont-fix",
   "affects": {
-    "label": "Both",
+    "label": "MR9A PRO and PR9",
     "builds": [
       "x99ha00m-20221202"
     ]
