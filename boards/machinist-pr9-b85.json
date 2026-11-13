@@ -24,6 +24,8 @@
     }
   ],
   "patches": [],
-  "findings": [],
+  "findings": [
+    "A08"
+  ],
   "evidence": []
 }
