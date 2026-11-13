@@ -1,0 +1,101 @@
+{
+  "schema": "bme.finding/1",
+  "id": "B10",
+  "title": "Sx exit handlers are registered, then called on entry with Phase 0",
+  "priority": "P2",
+  "status": "fixed-by-patch",
+  "affects": {
+    "label": "Both",
+    "builds": [
+      "x99ha00m-20221202"
+    ]
+  },
+  "owner": {
+    "description": "PchSmiDispatcher Sx registration/comparison",
+    "modules": [
+      {
+        "ui_name": "PchSmiDispatcher",
+        "ffs_guid": "B0D6ED53-B844-43F5-BD2F-61095264E77E"
+      }
+    ],
+    "references": [
+      {
+        "module": "PchSmiDispatcher",
+        "location": "Type-only comparator at RVA 45AC"
+      }
+    ]
+  },
+  "confidence": {
+    "finding": {
+      "grade": "C0"
+    }
+  },
+  "description": "The dispatcher accepts exit handlers, then calls them during entry with Phase 0 because the comparison ignores Phase.",
+  "not_established": "No real exit client or physical failure is established.",
+  "remediation": "Separate 34-byte-difference PE candidates return EFI_UNSUPPORTED for exit requests and free the unused record. C1 local, C2 physical validation. Entry and power-button controls pass.",
+  "evidence": [],
+  "patches": [
+    "B10"
+  ],
+  "detectors": [
+    {
+      "id": "sx-phase-ignored",
+      "title": "Sx registration compares Type only, so exit handlers fire on entry",
+      "anchor": {
+        "in": "pe32",
+        "module_kind": "smm"
+      },
+      "signatures": [
+        {
+          "label": "register-compare",
+          "defect": {
+            "bytes": "80000000413bc50f8cbdfcffff83f8060f8db4fcffff8b8384000000413bc50f8ca5fcffff83f8020f8d9cfcffff48",
+            "wild": [
+              9,
+              10,
+              11,
+              12,
+              18,
+              19,
+              20,
+              21,
+              33,
+              34,
+              35,
+              36,
+              42,
+              43,
+              44,
+              45
+            ]
+          },
+          "fixed": {
+            "bytes": "8000000083f8060f83bdfcffff8b838400000085c07417ffc80f85abfcffff48bf0300000000000080e9a6fcffff48",
+            "wild": [
+              9,
+              10,
+              11,
+              12,
+              18,
+              19,
+              20,
+              21,
+              27,
+              28,
+              29,
+              30,
+              42,
+              43,
+              44,
+              45
+            ]
+          }
+        }
+      ],
+      "expect": {
+        "min_per_module": 1,
+        "max_per_module": 1
+      }
+    }
+  ]
+}
