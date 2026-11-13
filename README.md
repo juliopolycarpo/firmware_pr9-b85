@@ -2,6 +2,28 @@
 
 A [Biosmod Engine](https://github.com/juliopolycarpo/biosmod-engine) catalog: the board profile, findings, patches and evidence for one board or one board family. `bme guide catalogs` describes every document.
 
+## This board
+
+| | |
+|---|---|
+| Board | Machinist PR9, Intel B85; physical revision not recorded. The firmware programs a Nuvoton NCT5532D Super I/O; the chip marking was not read |
+| Board profile | `boards/machinist-pr9-b85.json` |
+| Firmware build | `x99ha00m-20221202`: X99HA00M 2022-12-02, version string `X99H BIOS Date: 12/02/2022 Ver: X99HA00M` |
+| Reference dump | full-chip read of the reviewed board, 16,777,216 bytes, SHA-256 `095a6f5a15c56b245f38044c53298c03f3fb5cb13294ce5f0ebaa84cd57375ec` |
+
+The reference dump holds that board's NVRAM, so a read of another PR9 has another SHA-256. `bme` identifies the build by its modules and patches a module only when its hash matches the recorded source.
+
+```sh
+bme scan dump.bin --catalog . --allow-unsigned-local
+bme patch dump.bin --recommended --catalog . --allow-unsigned-local
+```
+
+No hardware observation is recorded for this board. Read `bme guide flashing` before you write an image to the chip.
+
+## Shared with the MR9A PRO
+
+The Machinist E5-MR9A PRO (Q87) ships a build of the same X99-derived AMI code base, so most defects exist on both boards. A shared defect keeps one id in both repositories: `firmware_mr9a-pro-rev1.2` records it with the same finding text and its own patch variant, and holds the hardware tests. A finding whose `affects.label` is `Both` is shared. The catalog bundled with `bme` holds the records of both boards.
+
 ## Layout
 
 | Path | Holds | In git |
