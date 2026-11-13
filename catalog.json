@@ -8,8 +8,8 @@
     {
       "path": "boards/machinist-pr9-b85.json",
       "kind": "board",
-      "length": 1111,
-      "sha256": "2c385042954b464086bb5238c3770fa8b9fb03ef3ceb6265b74b87b9e8b68d3a"
+      "length": 1145,
+      "sha256": "fb7a27a8c7797ba8f5e9b7128a14d1d552daf0897de5393070215b59fe088c65"
     },
     {
       "path": "findings/A02.json",
@@ -38,8 +38,8 @@
     {
       "path": "findings/B01.json",
       "kind": "finding",
-      "length": 988,
-      "sha256": "34cbf8c16062f9efe40698ae6f527d15b458e2982782a2a51e67eac265db23dc"
+      "length": 1011,
+      "sha256": "60d1d78cab720fbb5fef5986e958591dc3ea86ca3e2021839cd4af61e9d61717"
     },
     {
       "path": "findings/B02.json",
@@ -54,6 +54,12 @@
       "sha256": "8cb1dd091ca41c25b7dfc13b632a76a5c28c4600d37895c59f9f03c03e489675"
     },
     {
+      "path": "findings/B04.json",
+      "kind": "finding",
+      "length": 1083,
+      "sha256": "eb37ba84039fa1a38b8744759c355c757282919bd01079a58c591616fc245fa8"
+    },
+    {
       "path": "findings/B05.json",
       "kind": "finding",
       "length": 991,
@@ -62,14 +68,14 @@
     {
       "path": "findings/B06.json",
       "kind": "finding",
-      "length": 933,
-      "sha256": "d6e8505c0b9892a6c129eb60665f27682ebce3941bca330d1ac66db5c9c59a1f"
+      "length": 956,
+      "sha256": "e1301c20fc97c80c97079462728802f18fc02923575026f417c2302e934c8259"
     },
     {
       "path": "findings/B08.json",
       "kind": "finding",
-      "length": 936,
-      "sha256": "38cf126a825089947f8b2f10e7d8ae408f33fa7d288038bf19dd4cbe06521b4b"
+      "length": 959,
+      "sha256": "cae00b51cd73551251d591c6218562a745ddb614ac2a527eff85a4b2a86dea62"
     },
     {
       "path": "findings/D01.json",
@@ -130,6 +136,12 @@
       "kind": "patch",
       "length": 16929,
       "sha256": "9d33d558574f3bf7036a47ff5589fb65e29456afc19e14371cd78a14b3d631ea"
+    },
+    {
+      "path": "patches/B01-B04-B06-B08.json",
+      "kind": "patch",
+      "length": 50825,
+      "sha256": "ae252c8efb0c9270a91cff73a8563c7c07e67b3927ad7a7b53bb761f352e27a5"
     },
     {
       "path": "patches/B01-B06.json",
