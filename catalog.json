@@ -8,8 +8,8 @@
     {
       "path": "boards/machinist-pr9-b85.json",
       "kind": "board",
-      "length": 971,
-      "sha256": "c324aeecdf229704c9f96f1b655ae6bbaea22f6be0d2fc6d526c4adadb79fe73"
+      "length": 993,
+      "sha256": "93a0b5ac3920fb412e28885885b2ba246126b7fdb37fd856a5795f5954865c6a"
     },
     {
       "path": "findings/A02.json",
@@ -22,6 +22,12 @@
       "kind": "finding",
       "length": 836,
       "sha256": "de27153660c3e25bad576a96401447179086a5f10333d9b15ccf7baa13442751"
+    },
+    {
+      "path": "findings/A07.json",
+      "kind": "finding",
+      "length": 1012,
+      "sha256": "48fcc6fc62d471d44733909fe2efbbf125df6d711b956a57448d1db6478b2188"
     },
     {
       "path": "findings/A08.json",
@@ -74,14 +80,20 @@
     {
       "path": "patches/A02.json",
       "kind": "patch",
-      "length": 3695,
-      "sha256": "f18b1a93b113863d898d7daa153419e3c681390d255c495f17b3cd72abb5a8a6"
+      "length": 3706,
+      "sha256": "124cb79c46f88723da16ccb8f05a2cc66d411d507532d13aa870cf2640d3f06d"
     },
     {
       "path": "patches/A03.json",
       "kind": "patch",
-      "length": 94426,
-      "sha256": "f04ca24800faa83de8f482411f97f0c1125c8fb04cebc2fa33959ad7ea85ba5f"
+      "length": 94437,
+      "sha256": "6336610e7ef46aafd36ea31b927637fdd3a74f3609faae5c17272cfed0c451f8"
+    },
+    {
+      "path": "patches/A07.json",
+      "kind": "patch",
+      "length": 16929,
+      "sha256": "9d33d558574f3bf7036a47ff5589fb65e29456afc19e14371cd78a14b3d631ea"
     }
   ]
 }

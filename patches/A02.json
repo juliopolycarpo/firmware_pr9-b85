@@ -22,7 +22,8 @@
   "requires": [],
   "supersedes": [],
   "conflicts": [
-    "A03"
+    "A03",
+    "A07"
   ],
   "limits": "Exact extracted DSDT method and checksum only. No inventoried caller exists, and firmware table producer/runtime substitution and ROM packaging are not included.",
   "provenance": {

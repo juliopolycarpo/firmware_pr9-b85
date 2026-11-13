@@ -22,7 +22,8 @@
   "requires": [],
   "supersedes": [],
   "conflicts": [
-    "A02"
+    "A02",
+    "A07"
   ],
   "limits": "Keeps each UID span16bytes and appends a55-byte root helper. Valid APTC entries return existing physical IDs; FF entries receive unique disjoint32-bit sentinel IDs. Native producers, status, MAT and routing stay unchanged. Relative helper lookup is checked against50 factory namespaces. Whole OS/firmware/container integration remains untested.",
   "provenance": {
