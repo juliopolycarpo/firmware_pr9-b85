@@ -4,5 +4,12 @@
   "version": "0.1.0",
   "title": "Machinist PR9 (B85) firmware",
   "engine": "^0.1",
-  "files": []
+  "files": [
+    {
+      "path": "boards/machinist-pr9-b85.json",
+      "kind": "board",
+      "length": 835,
+      "sha256": "c2ba918d4e12d4667c86f74cbd9126417e37b85fb398d8edc38ba82981433cef"
+    }
+  ]
 }
