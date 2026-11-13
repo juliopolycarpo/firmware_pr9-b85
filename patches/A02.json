@@ -21,7 +21,9 @@
   "packing": "automatic",
   "requires": [],
   "supersedes": [],
-  "conflicts": [],
+  "conflicts": [
+    "A03"
+  ],
   "limits": "Exact extracted DSDT method and checksum only. No inventoried caller exists, and firmware table producer/runtime substitution and ROM packaging are not included.",
   "provenance": {
     "repository": "https://github.com/juliopolycarpo/x99-bios-fixes",
