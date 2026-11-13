@@ -1,0 +1,35 @@
+{
+  "schema": "bme.patch/1",
+  "id": "MRC-BREADCRUMBS",
+  "version": "2.0.0",
+  "title": "Keep the last MRC checkpoint in upper-bank CMOS E0-E9 and freeze it when a pass dies",
+  "class": "diagnostic",
+  "tier": "optional",
+  "findings": [],
+  "confidence": {
+    "findings": {},
+    "offline_fix": "C1",
+    "physical_fix": "C2"
+  },
+  "packing": "automatic",
+  "requires": [
+    "B01-B06",
+    "B02-B03"
+  ],
+  "supersedes": [],
+  "conflicts": [],
+  "limits": "Diagnostic, not a correction. Completed-pass logging was observed once on one MR9A PRO V1.2; retention of a failed pass is not validated (a no-RAM POST 53 attempt left no failed record, cause unresolved). Records MRC only: BF ends tracking, later errors such as no-GPU d6 are out of scope. Best effort: no checksum, not reset-atomic, not synchronized with other CMOS writers. Uses the NOP runs freed by B01-B06 and replaces the old port-80 writer, so other patches to UncoreInitPeim must be composed before it, not on top of it. Read E0-E9 with `bme diag breadcrumbs read` before clearing CMOS.",
+  "provenance": {
+    "repository": "https://github.com/juliopolycarpo/x99-bios-fixes",
+    "commit": "765e7a80ae8337c0953dc0da41de5f28b56c5c92",
+    "path": "tools/mrc-breadcrumbs.asm",
+    "sha256": "575e1b3f996cab880a03e28653be33e09499bc3219c02e3c28c082020fb0463e",
+    "note": "revision 2; hunks are the NASM output of provenance/MRC-BREADCRUMBS/mrc-breadcrumbs.asm placed by tools/build_breadcrumbs.py (r0 FFE4276C, ra FFE613A2, rb FFE61903, call site FFE0FEA9)"
+  },
+  "variants": {
+    "x99ha00m-20221202": {
+      "status": "not-applicable",
+      "reason": "Written against the MR9A UncoreInitPeim and its flash address; PR9 has a different module and layout."
+    }
+  }
+}

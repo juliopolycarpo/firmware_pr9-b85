@@ -8,8 +8,8 @@
     {
       "path": "boards/machinist-pr9-b85.json",
       "kind": "board",
-      "length": 1358,
-      "sha256": "274fe6c7c5789f4dc6feffc2624cbd289a0378eba39783832b558ca448c80534"
+      "length": 1381,
+      "sha256": "c2b1a0e721896eb8ad7d0a8883a8557c5b12297d14e8c5eeeee79c85fea3bda1"
     },
     {
       "path": "findings/A02.json",
@@ -270,6 +270,12 @@
       "sha256": "da2c47bd6f2457f276d7284295fb6da96d2553d1f79e8423d467e5a883746a16"
     },
     {
+      "path": "patches/MRC-BREADCRUMBS.json",
+      "kind": "patch",
+      "length": 1742,
+      "sha256": "3b1be1bfb7b9f1ef30385c39b0a3f284fb8013b497af9d6e456c8ec0e2b3007c"
+    },
+    {
       "path": "patches/R01.json",
       "kind": "patch",
       "length": 6642,
@@ -286,6 +292,12 @@
       "kind": "patch",
       "length": 3118,
       "sha256": "656fa03fdfc0cc60b9300391f68b884073401aa2e7c9e0b90d984bf51bf93709"
+    },
+    {
+      "path": "provenance/MRC-BREADCRUMBS/mrc-breadcrumbs.asm",
+      "kind": "provenance",
+      "length": 5083,
+      "sha256": "575e1b3f996cab880a03e28653be33e09499bc3219c02e3c28c082020fb0463e"
     }
   ]
 }
