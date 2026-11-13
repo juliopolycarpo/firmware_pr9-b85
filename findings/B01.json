@@ -1,0 +1,33 @@
+{
+  "schema": "bme.finding/1",
+  "id": "B01",
+  "title": "Unbounded SPD completion polls in the iMC reader and writer",
+  "priority": "P1",
+  "status": "fixed-by-patch",
+  "affects": {
+    "label": "Both",
+    "builds": [
+      "x99ha00m-20221202"
+    ]
+  },
+  "owner": {
+    "description": "UncoreInitPeim iMC SPD reader and writer",
+    "modules": [
+      {
+        "ui_name": "UncoreInitPeim",
+        "ffs_guid": "D71C8BA4-4AF2-4D0D-B1BA-F2409F0C20D3"
+      }
+    ]
+  },
+  "confidence": {
+    "finding": {
+      "grade": "C0"
+    }
+  },
+  "description": "Missing completion can trap early boot in unbounded polls, and a timed pre-BUSY expiration still issues a command. The original instructions were reproduced.",
+  "remediation": "Coupled reader/writer bounded-wait PE candidates. C1 local control flow, C2 hardware recovery. The existing read wrapper retries once. The alternate high-address route is outside this correction.",
+  "evidence": [],
+  "patches": [
+    "B01-B06"
+  ]
+}
