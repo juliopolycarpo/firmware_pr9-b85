@@ -33,7 +33,9 @@
     "B01-B06",
     "B08"
   ],
-  "conflicts": [],
+  "conflicts": [
+    "B07-B08"
+  ],
   "limits": "Fresh data and exclusive stable ownership are required. No new remote token acquisition or controller reset is attempted. Identical EEPROM pages are rejected. Pending transactions/invalid nonlocal frames/unresponsive peers use the existing intentional terminal halt; safe ordinary initialization failures propagate EFI_DEVICE_ERROR. The SSA wrapper returns its observed existing nonzero rejection4 with caller buffer unchanged; arbitrary external diagnostic consumers are outside the ROM proof. No established relation to the physical intermittent60/67 trigger. Failure/reset continuation requires a sole active BSP and no prior initialized remote workers; uncertain worker state takes the existing terminal halt before callbacks.",
   "provenance": {
     "repository": "https://github.com/juliopolycarpo/x99-bios-fixes",

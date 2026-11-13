@@ -29,6 +29,7 @@
   "remediation": "Separate 23-byte frame corrections for both boards. C1 local correction.",
   "patches": [
     "B01-B04-B06-B08",
+    "B07-B08",
     "B08"
   ]
 }
