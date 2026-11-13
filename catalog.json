@@ -8,8 +8,8 @@
     {
       "path": "boards/machinist-pr9-b85.json",
       "kind": "board",
-      "length": 1281,
-      "sha256": "2440ff72f9eeb8aa64c0ce305b449541e4b3992ca959ee5859517044468a36b8"
+      "length": 1303,
+      "sha256": "cc57d83cf515d6ff0685feaad67b0c90cf1ae923e9ad6476c046ee90cc08a202"
     },
     {
       "path": "findings/A02.json",
@@ -156,6 +156,12 @@
       "sha256": "7ed02227f771edbcd45d45d83bf89f29d3f2183a2bebed28e60e17c2437ee94d"
     },
     {
+      "path": "findings/R01.json",
+      "kind": "finding",
+      "length": 903,
+      "sha256": "1cb0d8da8fef3fe8c71b6803afaa794185a8f3ff8919caeeda4b523f7a431d75"
+    },
+    {
       "path": "patches/A02.json",
       "kind": "patch",
       "length": 3706,
@@ -238,6 +244,12 @@
       "kind": "patch",
       "length": 2114,
       "sha256": "da2c47bd6f2457f276d7284295fb6da96d2553d1f79e8423d467e5a883746a16"
+    },
+    {
+      "path": "patches/R01.json",
+      "kind": "patch",
+      "length": 6642,
+      "sha256": "412c530fe2dbda51410b55d8f0cacb0c91cc8573d1a8e5693afb8b3b5b136ea0"
     }
   ]
 }
