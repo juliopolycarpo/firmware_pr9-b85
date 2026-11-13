@@ -8,8 +8,8 @@
     {
       "path": "boards/machinist-pr9-b85.json",
       "kind": "board",
-      "length": 859,
-      "sha256": "e0563a8bae836b91766473af65b529b015ab0e2f527e3a14a254c645e377d845"
+      "length": 870,
+      "sha256": "63ea87232df39243350cd6a8f1b707c169d742939568baa0fb5c92dbbf893e1b"
     },
     {
       "path": "findings/A08.json",
@@ -22,6 +22,12 @@
       "kind": "finding",
       "length": 1415,
       "sha256": "4352227c37be061887ccf4b0cd1e4ecfa7f84e0df3b62625b4316864f33e16e0"
+    },
+    {
+      "path": "findings/H07.json",
+      "kind": "finding",
+      "length": 773,
+      "sha256": "492a2c4c51fbc01212e6b6556815406c2c7a792c140c3710720713017b37c749"
     }
   ]
 }
