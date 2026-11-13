@@ -1,0 +1,39 @@
+{
+  "schema": "bme.patch/1",
+  "id": "H01",
+  "version": "1.0.0",
+  "title": "Clear MR9A's documented Super I/O test-mode bit",
+  "class": "correction",
+  "tier": "hold",
+  "findings": [
+    "H01"
+  ],
+  "fixes": [
+    "H01"
+  ],
+  "confidence": {
+    "findings": {
+      "H01": "C1"
+    },
+    "offline_fix": "C1",
+    "physical_fix": "C2"
+  },
+  "packing": "automatic",
+  "requires": [],
+  "supersedes": [],
+  "conflicts": [],
+  "limits": "HOLD: physical package, wiring and possible vendor workaround are unresolved. Native I/O execution proves the one-bit difference, not pin behavior or safe physical deployment.",
+  "provenance": {
+    "repository": "https://github.com/juliopolycarpo/x99-bios-fixes",
+    "commit": "765e7a80ae8337c0953dc0da41de5f28b56c5c92",
+    "path": "patches/H01.json",
+    "sha256": "8259ca9c6d68eeadee8034be418fea61a8841b67704d65ff0fe2a6439d84e885",
+    "note": "converted by `bme catalog import-x99fix`; hunks and hashes copied verbatim"
+  },
+  "variants": {
+    "x99ha00m-20221202": {
+      "status": "not-applicable",
+      "reason": "The PR9 source already clears TEST_MODE1 at this initialization row."
+    }
+  }
+}
