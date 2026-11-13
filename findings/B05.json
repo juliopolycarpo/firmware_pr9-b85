@@ -31,7 +31,6 @@
   "description": "The wake and S3 classifiers omit the documented general-reset veto, so a stale S3 status selects resume after a general reset.",
   "not_established": "Earlier SEC behavior is outside the patch.",
   "remediation": "Two-module per-board GEN_RST guard candidates. C2 for the hardware repair.",
-  "evidence": [],
   "patches": [
     "B05"
   ]

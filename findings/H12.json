@@ -38,6 +38,5 @@
   },
   "description": "The PECI base is a constant instead of the CPU's TjMax: MR9A writes 5B (91) to both agents, PR9 writes 42 (66) to Agent0. The NCT5532D reports Tbase plus the negative PECI value, which is a temperature only when Tbase matches the CPU. On the MR9A with an E5-2680 v4 (TjMax 100 from MSR 1A2), 42 simultaneous samples show the chip 9 °C below the CPU's own reading (28 vs 37 idle, 39 vs 48 loaded). Setup temperature and the Smart Fan curve use the shifted value, so the MR9A curve points 30/40/50/60 act at 39/49/59/69 °C.",
   "not_established": "PR9's offset is unmeasured: 42 would read 34 °C low on a TjMax-100 CPU. The user reports a low Setup temperature on both boards.",
-  "remediation": "Two data bytes per board (MR9A PE 393/397, PR9 47F/4BF) set to the installed CPU's TjMax; correct for one TjMax only. A CPU-independent fix reads MSR 1A2 at init. No candidate built. C1 local, C2 physical.",
-  "evidence": []
+  "remediation": "Two data bytes per board (MR9A PE 393/397, PR9 47F/4BF) set to the installed CPU's TjMax; correct for one TjMax only. A CPU-independent fix reads MSR 1A2 at init. No candidate built. C1 local, C2 physical."
 }

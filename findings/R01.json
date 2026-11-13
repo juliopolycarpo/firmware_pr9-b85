@@ -26,7 +26,6 @@
   },
   "description": "The populated-DIMM branch hardcodes total width 72 and data width 72. A live MR9A capture confirms 72/72.",
   "remediation": "Complete DDR3/DDR4 width decoder from the existing SPD-width HOB byte. C1 local, C2 loader/physical. Handles ECC, non-ECC, unknown and empty slots. The PE grows by 160 bytes; ROM fit is untested.",
-  "evidence": [],
   "patches": [
     "R01"
   ]

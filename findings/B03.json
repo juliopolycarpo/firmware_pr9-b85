@@ -26,7 +26,6 @@
   },
   "description": "In Auto, with no retained DDR4 knowledge, page-1 bytes can be parsed as the SPD header.",
   "remediation": "Establish page 0 before discovery, including Auto. Same page candidates as B02, C1. Failed page commands remain B04.",
-  "evidence": [],
   "patches": [
     "B02-B03"
   ]

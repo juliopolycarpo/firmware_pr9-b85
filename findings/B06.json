@@ -26,7 +26,6 @@
   },
   "description": "An ordinary SBE returns success, so a real four-write caller can return overall success when later reads succeed.",
   "remediation": "Separate B01+B06 PE candidates propagate ordinary errors and keep the 6C/6E page-selector exception. C1 local, C2 hardware. Known-DDR4 data verification sits in B04's dependent batch; initial discovery stays separate.",
-  "evidence": [],
   "patches": [
     "B01-B04-B06-B08",
     "B01-B06"
