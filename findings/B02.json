@@ -1,0 +1,33 @@
+{
+  "schema": "bme.finding/1",
+  "id": "B02",
+  "title": "DDR4 detector overwrites its DIMM-slot counter",
+  "priority": "P1",
+  "status": "fixed-by-patch",
+  "affects": {
+    "label": "Both",
+    "builds": [
+      "x99ha00m-20221202"
+    ]
+  },
+  "owner": {
+    "description": "UncoreInitPeim DDR4 detector",
+    "modules": [
+      {
+        "ui_name": "UncoreInitPeim",
+        "ffs_guid": "D71C8BA4-4AF2-4D0D-B1BA-F2409F0C20D3"
+      }
+    ]
+  },
+  "confidence": {
+    "finding": {
+      "grade": "C0"
+    }
+  },
+  "description": "With page selection enabled, the path overwrites its outer DIMM-slot counter with an inner counter and probes slot 3.",
+  "remediation": "Separate counter storage, through the existing nine-byte per-board page candidates. C1 within tested behavior.",
+  "evidence": [],
+  "patches": [
+    "B02-B03"
+  ]
+}
