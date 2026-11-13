@@ -1,0 +1,95 @@
+{
+  "schema": "bme.finding/1",
+  "id": "B09",
+  "title": "SMM library byte counter over the configuration-table count",
+  "priority": "P2",
+  "status": "fixed-by-patch",
+  "affects": {
+    "label": "Both",
+    "builds": [
+      "x99ha00m-20221202"
+    ]
+  },
+  "owner": {
+    "description": "53 AMI SMM-library copies in DXE and SMM modules",
+    "modules": [
+      {
+        "ui_name": "OEMSmi",
+        "ffs_guid": "221F1D4F-034C-4BEA-B2BB-B7A9672B66D7"
+      },
+      {
+        "ui_name": "OEMSleepSmi",
+        "ffs_guid": "221F1D4F-034C-4BEA-B2BB-B7A9672B06F9"
+      }
+    ],
+    "references": [
+      {
+        "build": "x99ha00m-20221202",
+        "module": "OEMSmi",
+        "location": "initialization RVA 8FC; count load 9DD, table pointer 9E9; loop LEA A01; counter A1E, compare A23"
+      }
+    ]
+  },
+  "confidence": {
+    "finding": {
+      "grade": "C0"
+    }
+  },
+  "description": "A byte counter scans a native-width configuration-table count, so tables of 256 or more entries loop forever.",
+  "not_established": "This is conditional; no physical table of that size was observed.",
+  "remediation": "All 27 PR9 and 26 MR9A inventoried copies have executed 6-7-byte corrections, including the required R11 initialization. C1 local, C2 physical repair. No ROM repack.",
+  "patches": [
+    "B09"
+  ],
+  "detectors": [
+    {
+      "id": "byte-counter-scan",
+      "title": "8-bit index over a native-width configuration-table count",
+      "anchor": {
+        "in": "pe32"
+      },
+      "signatures": [
+        {
+          "label": "bl-r8",
+          "defect": {
+            "bytes": "fec30fb6c3493bc072d9"
+          },
+          "fixed": {
+            "bytes": "48ffc39090493bd872d9"
+          }
+        },
+        {
+          "label": "bl-rdx",
+          "defect": {
+            "bytes": "fec30fb6c3483bc272d9"
+          },
+          "fixed": {
+            "bytes": "48ffc39090483bda72d9"
+          }
+        },
+        {
+          "label": "dil-rdx",
+          "defect": {
+            "bytes": "40fec7400fb6c7483bc272d7"
+          },
+          "fixed": {
+            "bytes": "48ffc7488bc790483bc272d7"
+          }
+        },
+        {
+          "label": "r11b-r8",
+          "defect": {
+            "bytes": "41fec3410fb6c3493bc072d7"
+          },
+          "fixed": {
+            "bytes": "49ffc3498bc390493bc072d7"
+          }
+        }
+      ],
+      "expect": {
+        "min_per_module": 1,
+        "max_per_module": 1
+      }
+    }
+  ]
+}
