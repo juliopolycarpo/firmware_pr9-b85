@@ -23,8 +23,11 @@
       "statement": "The board carries a Nuvoton NCT5532D Super I/O (read the chip marking). The H01/H02 analysis uses that chip's datasheet."
     }
   ],
-  "patches": [],
+  "patches": [
+    "A02"
+  ],
   "findings": [
+    "A02",
     "A08",
     "D01",
     "H07",
