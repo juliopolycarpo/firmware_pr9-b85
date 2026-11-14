@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "title": "Machinist PR9 (B85) firmware",
   "engine": "^0.1",
+  "repository": "https://github.com/juliopolycarpo/firmware_pr9-b85",
   "files": [
     {
       "path": "boards/machinist-pr9-b85.json",
